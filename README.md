@@ -8,6 +8,8 @@
 
 _A web application for a tap room._
 
+https://trailbendtaproom.com
+
 ## Setup/Installation Requirements
 
 * Download and install Node.js
@@ -18,7 +20,19 @@ _A web application for a tap room._
 
 ## Support and contact details
 
-_If you run into any issues or have questions, ideas or concerns. Please contact us at jasmine.al1722@gmail.com or thearyim@gmail.com_
+_If you run into any issues or have questions, ideas or concerns. Please contact me at sjullieb@gmail.com_
+
+
+// {masterKegsList.map((keg, index) =>
+//   <Keg
+//     name={keg.name}
+//     brand={keg.brand}
+//     style={keg.style}
+//     alcohol={keg.alcohol}
+//     price={keg.price}
+//     key={index}
+//    />
+// )}
 
 ## Technologies Used
 

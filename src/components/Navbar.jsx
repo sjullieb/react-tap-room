@@ -5,7 +5,7 @@ function Navbar(){
   return(
     <div style={{float: "right"}}>
       <NavbarSection link="/" name="Beers"/>
-      <NavbarSection link="/location" name="Location"/>
+      <NavbarSection link="/NewKeg" name="New Keg"/>
       <NavbarSection link="/about" name="About"/>
     </div>
   );
