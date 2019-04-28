@@ -3,7 +3,7 @@ import NavbarSection from "./NavbarSection";
 
 function Navbar(){
   return(
-    <div style={{float: "left", marginLeft: "10px"}}>
+    <div style={{float: "left"}}>
       <NavbarSection link="/" name="Beers"/>
       <NavbarSection link="/newkeg" name="New Keg"/>
       <NavbarSection link="/about" name="About"/>

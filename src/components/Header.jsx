@@ -1,10 +1,16 @@
 import React from  'react';
 import Navbar from "./Navbar";
+import logo from '../assets/images/logo.svg';
 
 function Header() {
   var headerStyle={
     display: "inline-block",
     color: "blue",
+  }
+  var styleLogo={
+    width: "30px",
+    float: "left",
+    padding: "20px"
   }
   return(
     <div className="main">
@@ -32,6 +38,7 @@ function Header() {
         `}
       </style>
       <div className='border-line'>
+        <img style={styleLogo} src={logo} alt='logo'></img>
         <h1 style={headerStyle}>Tap Room</h1>
         <Navbar/>
       </div>

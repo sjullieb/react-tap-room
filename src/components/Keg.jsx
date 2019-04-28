@@ -9,16 +9,20 @@ function Keg(props){
     border: '3px red',
     borderStyle: 'none none dotted none'
   };
+  var styleBeerName={
+    textWeight: 'bold'
+  }
   return(
   <div style={styleGrid}>
     <div >
-      <h4>{props.index}. {props.name} | {props.brand}</h4>
-      <p>{props.type} | {props.alcohol}</p>
-      <p>{props.price}</p>
+      <h4 style={styleBeerName}>{props.index}. {props.name} | {props.brand}</h4>
+      <p>{props.type} | {props.alcohol}% abv<br/>
+      ${props.price}</p>
     </div>
     <div>
+      <p>Pint left: {props.pintLeft}</p>
+      <button>-1 pint</button><br/>
       <button>Edit</button>
-      <button>-1 pint</button>
     </div>
   </div>
   );
@@ -30,7 +34,8 @@ Keg.propTypes = {
   brand: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   alcohol: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  pintLeft: PropTypes.number.isRequired
 };
 
 export default Keg;

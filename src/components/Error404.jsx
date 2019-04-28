@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Error404(){
+  var linkDecoration={
+    textDecoration: 'none',
+    color: 'grey'
+  };
   return(
   <div>
     <h1>Unfortunately we can't find the requested page :(</h1>
-    <Link to='/'><p>Go to Home page</p></Link>
+    <Link to='/' style={linkDecoration}><p>Go to Home page</p></Link>
   </div>
   );
 }

@@ -8,9 +8,12 @@ import KegsList from './KegsList';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
-
+  var styleHeaderMargin={
+    marginTop: '110px',
+    fontFamily: "'Trebuchet MS', Helvetica, sans-serif"
+  }
   return (
-    <div>
+    <div style={styleHeaderMargin}>
       <Header/>
       <Switch>
         <Route exact path='/' component={KegsList} />
