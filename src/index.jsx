@@ -5,8 +5,9 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from "react-router-dom";
 
 const render = (Component) => {
+  var bodyStyle={backgroundColor: 'black'}
   ReactDOM.render(
-    <AppContainer>
+    <AppContainer style={bodyStyle}>
       <HashRouter>
         <Component/>
       </HashRouter>

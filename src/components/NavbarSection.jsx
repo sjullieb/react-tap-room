@@ -9,7 +9,7 @@ function NavbarSection(props){
   };
   var linkDecoration={
     textDecoration: 'none',
-    color: 'grey'
+    color: 'black'
   };
 
   return(

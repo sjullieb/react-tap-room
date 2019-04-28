@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.svg';
 function Header() {
   var headerStyle={
     display: "inline-block",
-    color: "blue",
+    color: "black",
   }
   var styleLogo={
     width: "30px",
@@ -28,18 +28,15 @@ function Header() {
           position: fixed;
           top: 0pt;
           left: 0pt;
-
           border-bottom: 4px solid white;
-
         }
         .border-line{
-          margin-bottom: 2px;
           border-bottom: 2px solid red;
         `}
       </style>
       <div className='border-line'>
         <img style={styleLogo} src={logo} alt='logo'></img>
-        <h1 style={headerStyle}>Tap Room</h1>
+        <h1 style={headerStyle}>TAPROOM</h1>
         <Navbar/>
       </div>
     </div>

@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Error404(){
+  var pageStyle={
+
+  }
   var linkDecoration={
     textDecoration: 'none',
-    color: 'grey'
+    color: 'black'
   };
   return(
   <div>

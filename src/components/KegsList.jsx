@@ -174,11 +174,14 @@ var styleGrid = {
   display: 'grid',
   gridTemplateColumns: '50% 50%'
 };
+var styleTapNumber={
+  color: 'red'
+};
 
 function KegsList(){
   return(
     <div>
-      <h4>{masterKegsList.length} taps, rotating daily.</h4>
+      <h4 style={styleTapNumber}>{masterKegsList.length} taps, rotating daily.</h4>
       <h2>ON DRAFT</h2>
       <div style={styleGrid}>
         {masterKegsList.map((keg, index) =>
