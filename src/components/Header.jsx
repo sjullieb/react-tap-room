@@ -6,12 +6,14 @@ function Header() {
   var headerStyle={
     display: "inline-block",
     color: "black",
-  }
+  };
+  
   var styleLogo={
     width: "30px",
     float: "left",
     padding: "20px"
-  }
+  };
+
   return(
     <div className="main">
       <style jsx>

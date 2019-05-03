@@ -14,196 +14,206 @@ class App extends Component {
     super(props);
 
     this.state={
-      masterKegsList = [
-          {
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          },{
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          },{
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            id: v4()
-          },
-          {
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Sour Storm",
-            brand: "Oakshire",
-            type: "Sour",
-            alcohol: 6.1,
-            price: 5,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "American Lager",
-            brand: "10 Barrell",
-            type: "Lager",
-            alcohol: 4.3,
-            price: 4,
-            pintLeft: 124,
-            id: v4()
-          },
-          {
-            name: "Outta Line",
-            brand: "Rouge",
-            type: "IRA",
-            alcohol: 7.2,
-            price: 6,
-            pintLeft: 124,
-            id: v4()
-          }
-        ];
-      this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
-      this.handlePintSubtraction = this.handlePintSubtraction.bind(this);
-      this.findKegIndex = this.findKegIndex.bind(this);
-    }
+      masterKegList: {
+        [v4()]: {
+          name: "Sour Storm",
+          brand: "Oakshire",
+          type: "Sour",
+          alcohol: 6.1,
+          price: 5,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "American Lager",
+          brand: "10 Barrell",
+          type: "Lager",
+          alcohol: 4.3,
+          price: 4,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "Outta Line",
+          brand: "Rouge",
+          type: "IRA",
+          alcohol: 7.2,
+          price: 6,
+          pintLeft: 124
+        }
+        //,
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6
+        // },
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124,
+        //   id: v4()
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Sour Storm",
+        //   brand: "Oakshire",
+        //   type: "Sour",
+        //   alcohol: 6.1,
+        //   price: 5,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "American Lager",
+        //   brand: "10 Barrell",
+        //   type: "Lager",
+        //   alcohol: 4.3,
+        //   price: 4,
+        //   pintLeft: 124
+        // },
+        // v4(): {
+        //   name: "Outta Line",
+        //   brand: "Rouge",
+        //   type: "IRA",
+        //   alcohol: 7.2,
+        //   price: 6,
+        //   pintLeft: 124
+        // }
+      }
+    };
+    this.handleNewKegCreation = this.handleNewKegCreation.bind(this);
+    this.handlePintSubtraction = this.handlePintSubtraction.bind(this);
+    this.handleUpdateKeg = this.handleUpdateKeg.bind(this);
+    this.handleDeleteKeg = this.handleDeleteKeg.bind(this);
+  }
+
+  handlePintSubtraction(kegId){
+    var newKegList = Object.assign({}, this.state.masterKegList);
+    newKegList[kegId].pintLeft--;
+    this.setState({masterKegList : newKegList});
+  }
+
+  handleNewKegCreation(newKeg){
+    var newKegId = v4();
+    newKeg.pintLeft = 124;
+    var newKegList = Object.assign({}, this.state.masterKegList, {[newKegId]: newKeg});
+    this.setState({masterKegList : newKegList});
+  }
+
+  handleUpdateKeg(kegId, newKeg){
+    var newKegList = Object.assign({}, this.state.masterKegList);
+    newKegList[kegId] = newKeg;
+    this.setState({masterKegList : newKegList});
+  }
+
+  handleDeleteKeg(kegId){
+    var newKegList = Object.assign({}, this.state.masterKegList);
+    delete newKegList[kegId];
+    this.setState({masterKegList : newKegList});
   }
 
   render(){
@@ -215,52 +225,21 @@ class App extends Component {
       width: '100%',
       backgroundImage: 'none',
       backgroundRepeat: 'repeat',
-    }
+    };
+
     var imgStyle={
       width: '100%',
       padding: '0',
       margin: '0'
-    }
-
-    findKegIndex(keg){
-      for(let i=0; i<this.status.masterKegList.length; i++)
-        if(this.status.masterKegList[i].id == keg.id)
-          return i;
-    }
-
-    handlePintSubtraction(keg){
-      const updatedKegList = this.status.masterKegList.slice();
-      updatedKegList[findKegIndex(keg.id)].pint--;
-      setStatus({masterKegList : updatedKegList});
-    }
-
-    handleNewKegCreation(newKeg){
-      const updatedKegList = this.status.masterKegList.slice();
-      updatedKegList.push(newKeg);
-      setStatus({masterKegList : updatedKegList});
-    }
-
-    handleUpdateKeg(keg){
-      const updatedKegList = this.status.masterKegList.slice();
-      updatedKegList[findKegIndex(keg.id)] = keg;
-      setStatus({masterKegList : updatedKegList});
-    }
-
-    handleDeleteKeg(keg){
-      const updatedKegList = this.status.masterKegList.slice();
-      updatedKegList.splice(findKegIndex(keg.id), 1);
-      setStatus({masterKegList : updatedKegList});
-    }
+    };
 
     return (
       <div style={styleHeaderMargin}>
         <Header/>
         <img src={headerImg} style={imgStyle}></img>
         <Switch>
-        <Route exact path='/' render => {<KegsList ticketList={masterTicketList} onSubtractPint={handlePintSubtraction}} />
-        <Route path='/newkeg' render => {NewKeg onNewKegCreation={handleNewKegCreation}} />
-         // <Route exact path='/' component={KegsList} />
-          // <Route path='/newkeg' component={NewKeg} />
+          <Route exact path='/' render = {() => <KegsList kegsList={this.state.masterKegList} onPintSubtraction={this.handlePintSubtraction} />} />
+          <Route path='/newkeg' render = {() => <NewKeg onNewKegCreation={this.handleNewKegCreation} />} />
           <Route component={Error404} />
         </Switch>
       </div>

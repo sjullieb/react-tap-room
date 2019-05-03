@@ -20,31 +20,30 @@ function Keg(props){
     border: '2px solid grey',
     borderRadius: '10px',
     margin: '5px',
-  }
+  };
+  var keg = props.keg;
   return(
-  <div style={styleGrid}>
-    <div >
-      <h3 style={styleBeerName}>{props.index}. {props.name} | {props.brand}</h3>
-      <p>{props.type} | {props.alcohol}% abv<br/>
-      ${props.price}</p>
+    <div style={styleGrid}>
+      <div >
+        <h3 style={styleBeerName}>{props.index}. {keg.name} | {keg.brand}</h3>
+        <p>{keg.type} | {keg.alcohol}% abv<br/>
+        ${keg.price}</p>
+      </div>
+      <div>
+        <p>Pint left: {keg.pintLeft}<br/>
+          <button style={styleButton} onClick={() => {props.onPintSubtraction(props.kegId)}}>-1 pint</button><br/>
+          <button style={styleButton}>Edit</button>
+        </p>
+      </div>
     </div>
-    <div>
-      <p>Pint left: {props.pintLeft}<br/>
-      <button style={styleButton}>-1 pint</button><br/>
-      <button style={styleButton}>Edit</button></p>
-    </div>
-  </div>
   );
 }
 
 Keg.propTypes = {
   index: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  alcohol: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
-  pintLeft: PropTypes.number
+  keg: PropTypes.object,
+  kegId: PropTypes.string,
+  onPintSubtraction: PropTypes.func
 };
 
 export default Keg;
