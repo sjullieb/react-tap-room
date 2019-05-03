@@ -32,6 +32,7 @@ function Keg(props){
       <div>
         <p>Pint left: {keg.pintLeft}<br/>
           <button style={styleButton} onClick={() => {props.onPintSubtraction(props.kegId);}}>-1 pint</button><br/>
+          <button style={styleButton} onClick={() => {props.onKegDeletion(props.kegId);}}>Delete</button><br/>
           <button style={styleButton}>Edit</button>
         </p>
       </div>

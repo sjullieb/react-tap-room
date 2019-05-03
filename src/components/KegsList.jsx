@@ -31,6 +31,7 @@ function KegsList(props){
               kegId={kegId}
               key={kegId}
               onPintSubtraction={props.onPintSubtraction}
+              onKegDeletion={props.onKegDeletion}
             />);}
         )}
       </div>
@@ -40,7 +41,8 @@ function KegsList(props){
 
 KegsList.propTypes={
   kegsList: PropTypes.object,
-  onPintSubtraction: PropTypes.func
+  onPintSubtraction: PropTypes.func,
+  onKegDeletion: PropTypes.func
 };
 
 export default KegsList;

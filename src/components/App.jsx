@@ -38,48 +38,48 @@ class App extends Component {
           alcohol: 7.2,
           price: 6,
           pintLeft: 124
+        },
+        [v4()]: {
+          name: "Sour Storm",
+          brand: "Oakshire",
+          type: "Sour",
+          alcohol: 6.1,
+          price: 5,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "American Lager",
+          brand: "10 Barrell",
+          type: "Lager",
+          alcohol: 4.3,
+          price: 4,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "Outta Line",
+          brand: "Rouge",
+          type: "IRA",
+          alcohol: 7.2,
+          price: 6,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "Sour Storm",
+          brand: "Oakshire",
+          type: "Sour",
+          alcohol: 6.1,
+          price: 5,
+          pintLeft: 124
+        },
+        [v4()]: {
+          name: "American Lager",
+          brand: "10 Barrell",
+          type: "Lager",
+          alcohol: 4.3,
+          price: 4,
+          pintLeft: 124
         }
-        //,
-        // v4(): {
-        //   name: "Sour Storm",
-        //   brand: "Oakshire",
-        //   type: "Sour",
-        //   alcohol: 6.1,
-        //   price: 5,
-        //   pintLeft: 124
-        // },
-        // v4(): {
-        //   name: "American Lager",
-        //   brand: "10 Barrell",
-        //   type: "Lager",
-        //   alcohol: 4.3,
-        //   price: 4,
-        //   pintLeft: 124
-        // },
-        // v4(): {
-        //   name: "Outta Line",
-        //   brand: "Rouge",
-        //   type: "IRA",
-        //   alcohol: 7.2,
-        //   price: 6,
-        //   pintLeft: 124
-        // },
-        // v4(): {
-        //   name: "Sour Storm",
-        //   brand: "Oakshire",
-        //   type: "Sour",
-        //   alcohol: 6.1,
-        //   price: 5,
-        //   pintLeft: 124
-        // },
-        // v4(): {
-        //   name: "American Lager",
-        //   brand: "10 Barrell",
-        //   type: "Lager",
-        //   alcohol: 4.3,
-        //   price: 4,
-        //   pintLeft: 124
-        // },
+        // ,
         // v4(): {
         //   name: "Outta Line",
         //   brand: "Rouge",
@@ -238,7 +238,11 @@ class App extends Component {
         <Header/>
         <img src={headerImg} style={imgStyle}></img>
         <Switch>
-          <Route exact path='/' render = {() => <KegsList kegsList={this.state.masterKegList} onPintSubtraction={this.handlePintSubtraction} />} />
+          <Route exact path='/' render = {() => <KegsList
+            kegsList={this.state.masterKegList}
+            onPintSubtraction={this.handlePintSubtraction}
+            onKegDeletion={this.handleDeleteKeg}
+           />} />
           <Route path='/newkeg' render = {() => <NewKeg onNewKegCreation={this.handleNewKegCreation} />} />
           <Route component={Error404} />
         </Switch>
