@@ -7,7 +7,7 @@ function Header() {
     display: "inline-block",
     color: "black",
   };
-  
+
   var styleLogo={
     width: "30px",
     float: "left",
@@ -20,7 +20,7 @@ function Header() {
         {`
           .main{
           text-align: center;
-          background-color: white;
+          background-color: lightyellow;
           height:100px;
           width: 100%;
           background-image: none;

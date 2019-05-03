@@ -6,6 +6,9 @@ import { HashRouter } from "react-router-dom";
 
 const render = (Component) => {
   var bodyStyle={backgroundColor: 'black'};
+  document.body.style.backgroundColor = "lightyellow";
+  document.body.style.margin="0";
+  
   ReactDOM.render(
     <AppContainer style={bodyStyle}>
       <HashRouter>

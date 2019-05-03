@@ -220,7 +220,7 @@ class App extends Component {
     var styleHeaderMargin={
       marginTop: '110px',
       color: 'black',
-      backgroundColor: 'white',
+      backgroundColor: 'lightyellow',
       fontFamily: "'Trebuchet MS', Helvetica, sans-serif",
       width: '100%',
       backgroundImage: 'none',
