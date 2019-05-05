@@ -17,8 +17,6 @@ var mainStyle={
 };
 
 function KegsList(props){
-  console.log(props.kegsList);
-
   return(
     <div style={mainStyle}>
       <h4 style={styleTapNumber}>{Object.keys(props.kegsList).length} taps, rotating daily.</h4>
@@ -35,6 +33,7 @@ function KegsList(props){
               onPintSubtraction={props.onPintSubtraction}
               onKegDeletion={props.onKegDeletion}
               onKegUpdate={props.onKegUpdate}
+              currentRouterPath={props.currentRouterPath}
             />);}
         )}
       </div>
@@ -44,6 +43,7 @@ function KegsList(props){
 
 KegsList.propTypes={
   kegsList: PropTypes.object,
+  currentRouterPath: PropTypes.string,
   onPintSubtraction: PropTypes.func,
   onKegDeletion: PropTypes.func,
   onKegUpdate: PropTypes.func

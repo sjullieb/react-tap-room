@@ -205,14 +205,9 @@ class App extends Component {
   }
 
   handleUpdateKeg(kegId, newKeg){
-    console.log('UPDATE KEG');
-    console.log(kegId);
-    console.log(newKeg);
-    console.log(this.state.masterKegList);
     var newKegList = Object.assign({}, this.state.masterKegList);
     newKegList[kegId] = newKeg;
     this.setState({masterKegList : newKegList});
-    console.log(this.state.masterKegList);    
   }
 
   handleDeleteKeg(kegId){
@@ -238,17 +233,31 @@ class App extends Component {
       margin: '0'
     };
 
+    var borderLineStyle={
+      border: '2px solid red !important',
+      color: 'red !important',
+      height: '3px !important'
+    };
+
     return (
       <div style={styleHeaderMargin}>
         <Header/>
         <img src={headerImg} style={imgStyle}></img>
         <Switch>
+
           <Route exact path='/' render = {() => <KegsList
             kegsList={this.state.masterKegList}
             onPintSubtraction={this.handlePintSubtraction}
             onKegDeletion={this.handleDeleteKeg}
             onKegUpdate={this.handleUpdateKeg}
-           />} />
+          />} />
+          <Route path='/admin' render = {(props) => <KegsList
+            kegsList={this.state.masterKegList}
+            onPintSubtraction={this.handlePintSubtraction}
+            onKegDeletion={this.handleDeleteKeg}
+            onKegUpdate={this.handleUpdateKeg}
+            currentRouterPath={props.location.pathname}
+          />} />
           <Route path='/newkeg' render = {() => <NewKeg onNewKegCreation={this.handleNewKegCreation} />} />
           <Route component={Error404} />
         </Switch>

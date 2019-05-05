@@ -14,12 +14,11 @@ class NewKeg extends Component {
     this._price = null;
 
     this.handleNewKegSubmission = this.handleNewKegSubmission.bind(this);
-    this.handleEditKegSubmission = this.handleEditKegSubmission.bind(this);    
+    this.handleEditKegSubmission = this.handleEditKegSubmission.bind(this);
   }
 
   handleNewKegSubmission(event){
     event.preventDefault();
-    console.log(this);
     this.props.onNewKegCreation(this.makeNewKegObject());
     this.clearVarValues();
     this.setState({toDashboard: true});
@@ -32,7 +31,6 @@ class NewKeg extends Component {
   }
 
   makeNewKegObject(){
-  //  console.log({name: this._name.value, brand: this._brand.value, type: this._type.value, alcohol: this._alcohol.value, pintLeft: this._pintLeft.value, price: this._price.value});
     return {name: this._name.value, brand: this._brand.value, type: this._type.value, alcohol: this._alcohol.value, pintLeft: this._pintLeft.value, price: this._price.value};
   }
 
@@ -70,7 +68,7 @@ class NewKeg extends Component {
 
     let content = '';
     if (this.state.toDashboard === true) {
-      content = <Redirect to='/' />;
+      content = <Redirect to='/admin' />;
     } else if (typeof this.props.kegId === 'undefined'){
       content =
         <div style={mainStyle}>

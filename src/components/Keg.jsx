@@ -13,7 +13,6 @@ class Keg extends React.Component{
   }
 
   handleEditButtonClick(){
-    console.log(this);
     this.setState({showEdit: true});
   }
 
@@ -22,7 +21,7 @@ class Keg extends React.Component{
     this.setState({showEdit: false});
   }
 
-  handleCancelEdit(kegId, updatedKeg){
+  handleCancelEdit(){
     this.setState({showEdit: false});
   }
 
@@ -54,9 +53,14 @@ class Keg extends React.Component{
       margin: '5px',
     };
 
-console.log(this.state.showEdit);
-    console.log('RENDER');
-
+    let buttonsContent = '';
+    if(this.props.currentRouterPath === '/admin'){
+      buttonsContent = <p>Pint left: {keg.pintLeft}<br/>
+        <button style={styleButton} onClick={() => {this.props.onPintSubtraction(this.props.kegId);}}>-1 pint</button><br/>
+        <button style={styleButton} onClick={() => {this.props.onKegDeletion(this.props.kegId);}}>Delete</button><br/>
+        <button style={styleButton} onClick={this.handleEditButtonClick}>Edit</button>
+      </p>;
+    }
     return(
       <div style={styleGrid}>
         <div >
@@ -66,11 +70,7 @@ console.log(this.state.showEdit);
 
         </div>
         <div>
-          <p>Pint left: {keg.pintLeft}<br/>
-            <button style={styleButton} onClick={() => {this.props.onPintSubtraction(this.props.kegId);}}>-1 pint</button><br/>
-            <button style={styleButton} onClick={() => {this.props.onKegDeletion(this.props.kegId);}}>Delete</button><br/>
-            <button style={styleButton} onClick={this.handleEditButtonClick}>Edit</button>
-          </p>
+          {buttonsContent}
         </div>
         {showForm}
       </div>
@@ -84,7 +84,8 @@ Keg.propTypes = {
   kegId: PropTypes.string,
   onPintSubtraction: PropTypes.func,
   onKegDeletion: PropTypes.func,
-  onKegUpdate: PropTypes.func
+  onKegUpdate: PropTypes.func,
+  currentRouterPath: PropTypes.string,
 };
 
 export default Keg;

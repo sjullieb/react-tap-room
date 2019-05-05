@@ -17,6 +17,7 @@ _A web application for a tap room which allows an admin to add new kegs, edit an
 * The user should be able to delete the keg.
 
 ## Refactoring
+
   I refactored NewKeg component and made it statefull to be able to Redirect to homepage after submitting a form.
   I refactored Keg component and made it statefull to show Edit form (reuse NewKeg component) when user clicks Edit button.
 
