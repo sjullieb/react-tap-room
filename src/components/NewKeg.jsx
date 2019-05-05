@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
 class NewKeg extends Component {
@@ -139,11 +139,11 @@ class NewKeg extends Component {
 }
 
 NewKeg.propTypes={
-  onNewKegCreation: PropType.func,
-  onKegUpdate:PropType.func,
-  onCancel:PropType.func,
-  keg: PropType.object,
-  kegId: PropType.string
+  onNewKegCreation: PropTypes.func,
+  onKegUpdate:PropTypes.func,
+  onCancel:PropTypes.func,
+  keg: PropTypes.object,
+  kegId: PropTypes.string
 };
 
 export default NewKeg;

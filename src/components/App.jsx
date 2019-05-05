@@ -233,12 +233,6 @@ class App extends Component {
       margin: '0'
     };
 
-    var borderLineStyle={
-      border: '2px solid red !important',
-      color: 'red !important',
-      height: '3px !important'
-    };
-
     return (
       <div style={styleHeaderMargin}>
         <Header/>
