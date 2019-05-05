@@ -53,7 +53,8 @@ class NewKeg extends Component {
 
     var styleInput={
       width: '100%',
-      height: '24px'
+      height: '24px',
+      fontFamily: "'Trebuchet MS', Helvetica, sans-serif",
     };
 
     var styleButton={

@@ -7,16 +7,13 @@ function NavbarSection(props){
     display: "inline-block",
     padding: "20px"
   };
+  
   var linkDecoration={
     textDecoration: 'none',
     color: 'black'
   };
 
   return(
-    // <button style={{navbarStyle}}>{props.name}</button>
-    // <button style={{navbarStyle}}>
-    //   <Link to={props.link}><button style={{navbarStyle}}>{props.name}</Link>
-    // </button>
     <p style={navbarStyle}><Link to={props.link} style={linkDecoration}>{props.name}</Link></p>
   );
 }

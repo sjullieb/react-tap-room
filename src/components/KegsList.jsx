@@ -13,7 +13,7 @@ var styleTapNumber={
 };
 var mainStyle={
   backgroundColor: 'lightyellow',
-  padding: '20px'
+  padding: '20px',
 };
 
 function KegsList(props){

@@ -13,7 +13,11 @@ class Keg extends React.Component{
   }
 
   handleEditButtonClick(){
-    this.setState({showEdit: true});
+    if(this.state.showEdit === false){
+      this.setState({showEdit: true});
+    } else {
+      this.handleCancelEdit();
+    }
   }
 
   handleKegEdit(kegId, updatedKeg){

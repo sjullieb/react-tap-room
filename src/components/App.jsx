@@ -230,7 +230,8 @@ class App extends Component {
     var imgStyle={
       width: '100%',
       padding: '0',
-      margin: '0'
+      margin: '0',
+      borderBottom: '2px solid red'
     };
 
     return (
@@ -238,7 +239,6 @@ class App extends Component {
         <Header/>
         <img src={headerImg} style={imgStyle}></img>
         <Switch>
-
           <Route exact path='/' render = {() => <KegsList
             kegsList={this.state.masterKegList}
             onPintSubtraction={this.handlePintSubtraction}
