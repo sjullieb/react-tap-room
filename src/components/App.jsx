@@ -205,9 +205,14 @@ class App extends Component {
   }
 
   handleUpdateKeg(kegId, newKeg){
+    console.log('UPDATE KEG');
+    console.log(kegId);
+    console.log(newKeg);
+    console.log(this.state.masterKegList);
     var newKegList = Object.assign({}, this.state.masterKegList);
     newKegList[kegId] = newKeg;
     this.setState({masterKegList : newKegList});
+    console.log(this.state.masterKegList);    
   }
 
   handleDeleteKeg(kegId){
@@ -242,6 +247,7 @@ class App extends Component {
             kegsList={this.state.masterKegList}
             onPintSubtraction={this.handlePintSubtraction}
             onKegDeletion={this.handleDeleteKeg}
+            onKegUpdate={this.handleUpdateKeg}
            />} />
           <Route path='/newkeg' render = {() => <NewKeg onNewKegCreation={this.handleNewKegCreation} />} />
           <Route component={Error404} />
