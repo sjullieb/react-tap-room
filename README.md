@@ -6,9 +6,7 @@
 
 ## Description
 
-_A web application for a tap room._
-Since our Angular application is not styles I'm going to create a new one simplifying this website:
-https://trailbendtaproom.com
+_A web application for a tap room which allows an admin to add new kegs, edit and delete existing kegs, decrease the number of pint left._
 
 ## Specifications
 
@@ -16,15 +14,16 @@ https://trailbendtaproom.com
 * The user should be able to add a new keg with 124 pints left.
 * The user should be able decrease by one the number of pints left.
 * The user should be able to edit the keg.
+* The user should be able to delete the keg.
 
-## Questions during the development process
-  How to change the data since it's static now?
+## Refactoring
 
-## Difference between Angular and React
-  When we started Angular I expected the components should be very specific and narrow. But apparently they are not. Here in React they are very specific and their functions are very narrow.
+  I refactored NewKeg component and made it statefull to be able to Redirect to homepage after submitting a form.
+  I refactored Keg component and made it statefull to show Edit form (reuse NewKeg component) when user clicks Edit button.
 
 ## Components
 
+Old version of components structure:
 !(src/assets/images/structure.jpg)  
 
 ## Setup/Installation Requirements

@@ -11,7 +11,7 @@ function Header() {
   var styleLogo={
     width: "30px",
     float: "left",
-    padding: "20px"
+    padding: "20px 20px 0 20px"
   };
 
   return(
@@ -21,7 +21,7 @@ function Header() {
           .main{
           text-align: center;
           background-color: lightyellow;
-          height:100px;
+          height:82px;
           width: 100%;
           background-image: none;
           background-repeat: repeat;
@@ -30,7 +30,7 @@ function Header() {
           position: fixed;
           top: 0pt;
           left: 0pt;
-          border-bottom: 4px solid white;
+          padding: 50
         }
         .border-line{
           border-bottom: 2px solid red;
