@@ -6,9 +6,7 @@
 
 ## Description
 
-_A web application for a tap room._
-Since our Angular application is not styles I'm going to create a new one simplifying this website:
-https://trailbendtaproom.com
+_A web application for a tap room which allows an admin to add new kegs, edit and delete existing kegs, decrease the number of pint left._
 
 ## Specifications
 
