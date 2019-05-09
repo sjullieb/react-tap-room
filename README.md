@@ -6,25 +6,16 @@
 
 ## Description
 
-_A web application for a tap room which allows an admin to add new kegs, edit and delete existing kegs, decrease the number of pint left._
+_A web application for a tap room which allows an admin to add new kegs, edit, and delete existing kegs, decrease the number of pint left._
 
 ## Specifications
 
 * The applications should have a list of all available kegs.
+* The user should be able to choose an admin mode.
 * The user should be able to add a new keg with 124 pints left.
-* The user should be able decrease by one the number of pints left.
-* The user should be able to edit the keg.
-* The user should be able to delete the keg.
-
-## Refactoring
-
-  I refactored NewKeg component and made it statefull to be able to Redirect to homepage after submitting a form.
-  I refactored Keg component and made it statefull to show Edit form (reuse NewKeg component) when user clicks Edit button.
-
-## Components
-
-Old version of components structure:
-!(src/assets/images/structure.jpg)  
+* The admin should be able decrease by one the number of pints left.
+* The admin should be able to edit the keg.
+* The admin should be able to delete the keg.
 
 ## Setup/Installation Requirements
 
